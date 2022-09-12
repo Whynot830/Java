@@ -21,11 +21,14 @@ public class Student {
         return gpa;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "This is student " + name + ", his/her id is " +
                 id + ", his/her gpa is " + gpa;
     }
-
 
 }
