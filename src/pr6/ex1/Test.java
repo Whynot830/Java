@@ -4,7 +4,7 @@ public class Test {
     public static void insertion_sort(Student[] list) {
         for (int i = 1; i < list.length; i++) {
             int j = i;
-            while ((j > 0) && (list[j - 1].compareTo(list[j]) > 0)) {
+            while (j > 0 && list[j - 1].compareTo(list[j]) > 0) {
                 Student tmp = list[j - 1];
                 list[j - 1] = list[j];
                 list[j] = tmp;
