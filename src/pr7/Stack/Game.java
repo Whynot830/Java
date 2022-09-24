@@ -38,10 +38,10 @@ public class Game {
         Stack<Integer> f = new Stack<>();
         Stack<Integer> s = new Stack<>();
         for (int i = 0; i < 5; i++) {
-            f.push(sc.nextInt());
+            f.add(sc.nextInt());
         }
         for (int i = 0; i < 5; i++) {
-            s.push(sc.nextInt());
+            s.add(sc.nextInt());
         }
         new Game(f, s);
 

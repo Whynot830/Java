@@ -7,18 +7,18 @@ public class Game {
         int steps = 0;
         Integer c1, c2;
         while (!f.isEmpty() && !s.isEmpty() && steps < 106) {
-            c1 = f.getLast();
-            c2 = s.getLast();
+            c1 = f.getFirst();
+            c2 = s.getFirst();
             if (c1 > c2 && !(c1 == 9 && c2 == 0) || (c1 == 0 && c2 == 9)) {
                 f.remove(c1);
                 s.remove(c2);
-                f.push(c1);
-                f.push(c2);
+                f.add(c1);
+                f.add(c2);
             } else {
                 f.remove(c1);
                 s.remove(c2);
-                s.push(c2);
-                s.push(c1);
+                s.add(c2);
+                s.add(c1);
             }
             System.out.println("step " + ++steps + ": " +
                     "\nfirst: " + f + "\nsecond: " + s + "\n---");
@@ -37,10 +37,10 @@ public class Game {
         ArrayDeque<Integer> f = new ArrayDeque<>();
         ArrayDeque<Integer> s = new ArrayDeque<>();
         for (int i = 0; i < 5; i++) {
-            f.push(sc.nextInt());
+            f.add(sc.nextInt());
         }
         for (int i = 0; i < 5; i++) {
-            s.push(sc.nextInt());
+            s.add(sc.nextInt());
         }
         new Game(f, s);
 
